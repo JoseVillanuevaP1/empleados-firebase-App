@@ -6,8 +6,8 @@ import {
   getDoc,
   query,
   deleteDoc,
-  updateDoc,
   doc,
+  updateDoc,
   where,
 } from 'firebase/firestore';
 import { Firestore } from '@angular/fire/firestore';

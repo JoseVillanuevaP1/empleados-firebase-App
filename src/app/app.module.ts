@@ -1,3 +1,4 @@
+//modulos
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -9,6 +10,7 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
+//componentes
 import { ListEmpleadoComponent } from './components/list-empleado/list-empleado.component';
 import { CreateEmpleadoComponent } from './components/create-empleado/create-empleado.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
