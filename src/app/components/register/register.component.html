@@ -1,0 +1,36 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-lg-6 offset-lg-3">
+      <div class="card ms-5" style="width: 30rem;">
+      <img src="./assets/company.jpg" class="card-img-top" height="250px" width="">
+        <div class="card-body">
+          <h3 class="text-center">Registro de Usuario</h3>
+          <form [formGroup]="formReg" (ngSubmit)="onSumbit()" action="post">
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo Electrónico:</label>
+              <input type="email" class="form-control form-control-lg" formControlName="email" id="email" [ngClass]="{ 'is-invalid': submitted
+              && formReg.get('email')?.errors}">
+              <span class="badge text-bg-danger mt-2" *ngIf="this.formReg.get('email')?.touched && this.formReg.get('correo')?.errors?.['required']">Campo
+                requerido
+              </span>
+              <span class="badge text-bg-danger mt-2" *ngIf="this.formReg.get('email')?.touched && this.formReg.get('correo')?.errors?.['email']">
+                Formato Incorrecto
+              </span>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Contraseña:</label>
+              <input type="password" class="form-control form-control-lg" formControlName="password" id="password" [ngClass]="{ 'is-invalid': submitted
+              && formReg.get('password')?.errors}">
+              <span class="badge text-bg-danger mt-2" *ngIf="this.formReg.get('password')?.touched && this.formReg.get('password')?.errors?.['required']">Campo
+                requerido
+              </span>
+            </div>
+            <div class="mb-3 d-grid gap-2 col-6 mx-auto"><button type="submit"
+                class="btn btn-primary btn-dark">Registrar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

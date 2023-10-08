@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "empleados-ffe71"
+  },
+  "targets": {
+    "empleados-ffe71": {
+      "hosting": {
+        "empleados-FirebaseApp": [
+          "empleados-ffe71"
+        ]
+      }
+    }
+  }
+}

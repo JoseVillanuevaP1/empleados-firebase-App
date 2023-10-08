@@ -1,0 +1,40 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-lg-6 offset-lg-3">
+      <div class="card ms-5" style="width: 30rem;">
+        <img src="./assets/angualrFire.webp" class="card-img-top">
+        <div class="card-body pt-2">
+          <h2 class="text-center my-3">Login de Usuario</h2>
+          <form [formGroup]="formLog" (ngSubmit)="onSumbit()" action="post">
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo Electrónico:</label>
+              <input type="email" class="form-control form-control-lg" formControlName="email" id="email" [ngClass]="{ 'is-invalid': submitted
+              && formLog.get('email')?.errors}">
+              <span class="badge text-bg-danger mt-2" *ngIf="this.formLog.get('email')?.touched && this.formLog.get('email')?.errors?.['required']">Campo
+                requerido
+              </span>
+              <span class="badge text-bg-danger mt-2" *ngIf="this.formLog.get('email')?.touched && this.formLog.get('email')?.errors?.['email']">
+                Formato Incorrecto
+              </span>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Contraseña:</label>
+              <input type="password" class="form-control form-control-lg" formControlName="password" id="password" [ngClass]="{ 'is-invalid': submitted
+              && formLog.get('password')?.errors}">
+              <span class="badge text-bg-danger mt-2" *ngIf="this.formLog.get('password')?.touched && this.formLog.get('password')?.errors?.['required']">Campo
+                requerido
+              </span>
+            </div>
+            <p  class="text-center"><a routerLink="/register-empleado" class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">¿No tienes cuenta?</a></p>
+            <div class="mb-3 d-grid gap-2 col-6 mx-auto"><button type="submit"
+                class="btn btn-primary btn-dark">Ingresar</button>
+            </div>
+          </form>
+          <div class="d-grid gap-2 col-6 mx-auto"><button
+            class="btn btn-primary" (click)="onClick()">Ingresa con Google</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
