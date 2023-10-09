@@ -23,18 +23,6 @@ export class ListEmpleadoComponent implements OnInit {
   }
 
   getEmpleados() {
-    var settings = {
-      "url": "https://v1.nocodeapi.com/josevillanueva/fbsdk/QClqdPlYYVqwerct/firestore/allDocuments?collectionName=empleados",
-      "method": "get",
-      "timeout": 0,
-      "headers": {
-          "Content-Type": "application/json"
-      },
-  };
-
-  $.ajax(settings).done(function (response) {
-      console.log(response);
-  });
     onSnapshot(this._empleadoService.getEmpleados(), async (querySnapshot) => {
       this.empleados = [];
       await querySnapshot.forEach((doc) => {
