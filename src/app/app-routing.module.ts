@@ -1,10 +1,11 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Input } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ListEmpleadoComponent } from './components/list-empleado/list-empleado.component';
 import { CreateEmpleadoComponent } from './components/create-empleado/create-empleado.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
+
 
 const routes: Routes = [
 
@@ -22,4 +23,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

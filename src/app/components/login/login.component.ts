@@ -45,6 +45,7 @@ export class LoginComponent implements OnInit {
 
   onClick(){
     this._serviceRegister.loginWithGoogle().then((response)=>{
+      console.log(response)
       this.router.navigate(['/list-empleados'])
     }).catch((error)=>console.log(error))
   }

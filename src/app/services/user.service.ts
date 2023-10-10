@@ -6,6 +6,7 @@ import { Auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signO
   providedIn: 'root',
 })
 export class UserService {
+
   constructor(private auth: Auth) {}
 
   register({ email, password }: any) {
